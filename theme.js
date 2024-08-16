@@ -75,7 +75,7 @@ export const theme = {
     xs: "0.125rem",
     // s: "0.375rem",
     sm: "0.25rem",
-    // md: "0.625rem",
+    md: "0.375rem",
     // ml: "1rem",
     // lg: "1.5rem",
     // xl: "2.25rem",
@@ -91,5 +91,8 @@ export const theme = {
     ml: "1.5rem", // 20px
     l: "2rem", // 28px
     xl: "3rem", // 40px
+  },
+  shadow: {
+    lg: "0px 10px 15px -3px rgba(0, 0, 0, 0.10), 0px 4px 6px -4px rgba(0, 0, 0, 0.10)",
   },
 };
