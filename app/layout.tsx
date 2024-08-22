@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Montserrat } from "next/font/google";
-import theme from "../antd-theme";
+import antdTheme from "../antd-theme";
 
 import "./globals.css";
 import { ConfigProvider } from "antd";
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ConfigProvider theme={theme}>
+      <ConfigProvider theme={antdTheme}>
         <body className={montserrat.className}>{children}</body>
       </ConfigProvider>
     </html>

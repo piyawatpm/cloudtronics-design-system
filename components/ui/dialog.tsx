@@ -1,6 +1,6 @@
-import React from 'react';
-import { Modal } from 'antd';
-import Button from './button';
+import React from "react";
+import { Modal } from "antd";
+import Button from "./button";
 
 interface DialogProps {
   isOpen: boolean;
@@ -17,8 +17,8 @@ const Dialog: React.FC<DialogProps> = ({
   onClose,
   title,
   children,
-  okText = 'OK',
-  cancelText = 'Cancel',
+  okText = "OK",
+  cancelText = "Cancel",
   onOk,
 }) => {
   return (
@@ -26,14 +26,14 @@ const Dialog: React.FC<DialogProps> = ({
       title={title}
       open={isOpen}
       onCancel={onClose}
-      footer={[
-        <Button key="cancel" onClick={onClose} variant="outline">
-          {cancelText}
-        </Button>,
-        <Button key="ok" onClick={onOk || onClose}>
-          {okText}
-        </Button>,
-      ]}
+      // footer={[
+      //   <Button key="cancel" onClick={onClose} variant="outline">
+      //     {cancelText}
+      //   </Button>,
+      //   <Button key="ok" onClick={onOk || onClose}>
+      //     {okText}
+      //   </Button>,
+      // ]}
     >
       {children}
     </Modal>

@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import Navigation from "./ui/navigation";
 
 const meta: Meta<typeof Navigation> = {
-  title: "Components/UI/Navigation",
+  title: "Components/ui/navigation",
   component: Navigation,
   tags: ["autodocs"],
   parameters: {
@@ -16,11 +16,20 @@ type Story = StoryObj<typeof Navigation>;
 
 const menuItems = [
   {
-    label: "Home",
+    label: "Main Menu Item1",
     href: "/",
   },
   {
-    label: "Products",
+    label: "Main Menu Item2",
+    href: "/",
+  },
+  {
+    label: "Main Menu Item3",
+    href: "/",
+  },
+
+  {
+    label: "Main Menu Item4",
     href: "/products",
     subMenu: [
       {
