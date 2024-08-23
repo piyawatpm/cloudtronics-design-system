@@ -159,3 +159,12 @@ export const Link: Story = {
   },
 };
 
+export const MoreRounded: Story = {
+  args: {
+    size: "default",
+    variant: "default",
+    children: "More Rounded Button",
+    onClick: action("clicked"),
+    disabled: false,
+  },
+};

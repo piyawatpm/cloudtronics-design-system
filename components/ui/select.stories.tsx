@@ -10,6 +10,10 @@ const meta: Meta<typeof Select> = {
     layout: "centered",
   },
   argTypes: {
+    open: {
+      control: "boolean",
+      description: "Whether the select is open or not",
+    },
     variant: {
       options: ["default", "error"],
       control: "select",
@@ -50,7 +54,7 @@ export const Default: Story = {
 export const Small: Story = {
   args: {
     placeholder: "Small select",
-    size: "sm",
+
     options: options,
   },
 };
@@ -58,7 +62,7 @@ export const Small: Story = {
 export const Large: Story = {
   args: {
     placeholder: "Large select",
-    size: "lg",
+
     options: options,
   },
 };
@@ -66,7 +70,7 @@ export const Large: Story = {
 export const Error: Story = {
   args: {
     placeholder: "Error select",
-    variant: "error",
+
     options: options,
   },
 };

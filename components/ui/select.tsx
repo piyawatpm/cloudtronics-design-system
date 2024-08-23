@@ -1,42 +1,24 @@
-import React from 'react';
-import { Select as AntSelect, SelectProps as AntSelectProps } from 'antd';
-import { cva, VariantProps } from 'class-variance-authority';
+import React from "react";
+import { Select as AntSelect, SelectProps as AntSelectProps } from "antd";
+import { CheckOutlined } from "@ant-design/icons";
 
-const selectVariants = cva(
-  'rounded-md border border-input bg-background text-sm ring-offset-background',
-  {
-    variants: {
-      variant: {
-        default: 'focus:ring-2 focus:ring-ring focus:ring-offset-2',
-        error: 'border-error-300 focus:ring-error-300',
-      },
-      size: {
-        default: 'h-10',
-        sm: 'h-9 text-xs',
-        lg: 'h-11',
-      },
-    },
-    defaultVariants: {
-      variant: 'default',
-      size: 'default',
-    },
-  }
-);
+export interface SelectProps extends AntSelectProps {
+  className?: string;
+}
 
-export interface SelectProps
-  extends AntSelectProps,
-    VariantProps<typeof selectVariants> {}
-
-const Select: React.FC<SelectProps> = ({
-  className,
-  variant,
-  size,
-  ...props
-}) => {
+const Select: React.FC<SelectProps> = ({ className, ...props }) => {
   return (
     <AntSelect
-      className={selectVariants({ variant, size, className })}
+      open
+      className={className}
       {...props}
+      menuItemSelectedIcon={null}
+      optionRender={(option) => (
+        <div>
+          {/* {option.selected && <CheckOutlined style={{ marginRight: 8 }} />} */}
+          {option.data.desc}
+        </div>
+      )}
     />
   );
 };

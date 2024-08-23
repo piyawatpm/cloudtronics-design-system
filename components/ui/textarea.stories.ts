@@ -45,21 +45,7 @@ export const Default: Story = {
   },
 };
 
-export const Small: Story = {
-  args: {
-    placeholder: "Small textarea",
-    size: "sm",
-    rows: 3,
-  },
-};
 
-export const Large: Story = {
-  args: {
-    placeholder: "Large textarea",
-    size: "lg",
-    rows: 6,
-  },
-};
 
 export const Error: Story = {
   args: {
