@@ -46,6 +46,15 @@ const antdTheme: ThemeConfig = {
       // buttonSolidCheckedColor: "white",
       // buttonSolidCheckedBg: "black",
     },
+    Table: {
+      colorBgBase: "red",
+      bodySortBg: "red",
+      colorBgContainer: theme.colors["base-white"],
+      headerColor: theme.colors["neutrals-700"],
+      headerBorderRadius: 0,
+      footerBg: theme.colors["neutrals-200"],
+      rowSelectedBg: theme.colors["primary-100"],
+    },
   },
 };
 
