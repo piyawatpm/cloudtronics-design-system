@@ -41,3 +41,11 @@ body {
   order: -1;
   margin-right: 0.375rem;
 }
+
+/* custom radio */
+.ant-radio-inner {
+  background-color: white !important;
+}
+.ant-radio-inner:after {
+  background-color: black !important;
+}

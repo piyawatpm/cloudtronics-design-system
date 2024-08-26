@@ -41,6 +41,11 @@ const antdTheme: ThemeConfig = {
       optionSelectedFontWeight: 400,
       // optionPadding: 1,
     },
+    Radio: {
+      dotSize: 8,
+      // buttonSolidCheckedColor: "white",
+      // buttonSolidCheckedBg: "black",
+    },
   },
 };
 
