@@ -22,9 +22,8 @@ const Radio: React.FC<RadioProps> = ({
       // style={{
       //   color: theme.colors.primary,
       // }}
-    
+
       {...props}
-     
     >
       <Space direction={direction}>
         {options?.map((option) => (
@@ -35,7 +34,7 @@ const Radio: React.FC<RadioProps> = ({
             key={option.value}
             value={option.value}
           >
-            {option.label} 22
+            {option.label}
           </AntRadio>
         ))}
       </Space>
