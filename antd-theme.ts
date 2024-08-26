@@ -5,7 +5,7 @@ console.log("theme = ", theme);
 const antdTheme: ThemeConfig = {
   token: {
     colorPrimary: theme.colors.primary,
-
+    fontFamily: "Montserrat, sans-serif",
     colorBgElevated: theme.colors["base-white"],
     // colorSuccess: '#A4F4E7',
     // colorWarning: '#fc9331',
@@ -15,6 +15,8 @@ const antdTheme: ThemeConfig = {
     // borderRadius: 4,
     boxShadow: theme.shadow.base,
     colorBorder: theme.colors["neutrals-200"],
+
+    colorBorderSecondary: theme.colors["neutrals-200"],
   },
   components: {
     Button: {
@@ -33,6 +35,11 @@ const antdTheme: ThemeConfig = {
       borderRadius: 10,
       colorBorder: theme.colors["neutrals-200"],
       optionSelectedBg: theme.colors["neutrals-100"],
+      optionSelectedColor: theme.colors["neutrals-900"],
+      optionFontSize: 14,
+      fontSize: 14,
+      optionSelectedFontWeight: 400,
+      // optionPadding: 1,
     },
   },
 };

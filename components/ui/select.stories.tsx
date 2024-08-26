@@ -38,10 +38,33 @@ const meta: Meta<typeof Select> = {
 export default meta;
 type Story = StoryObj<typeof Select>;
 
+const optionWithCategories = [
+  {
+    label: <span>Frutis</span>,
+    title: "Frutis",
+    options: [
+      { label: <span>Apple</span>, value: "Apple", disabled: true },
+      { label: <span>Banana</span>, value: "Banana", disabled: true },
+      { label: <span>Orange</span>, value: "Orange" },
+      { label: <span>Mango</span>, value: "Mango" },
+    ],
+  },
+  {
+    label: <span>Vegetables</span>,
+    title: "Vegetables",
+    options: [
+      { label: <span>Carrot</span>, value: "Carrot" },
+      { label: <span>Broccoli</span>, value: "Broccoli" },
+      { label: <span>Cucumber</span>, value: "Cucumber" },
+      { label: <span>Lettuce</span>, value: "Lettuce" },
+    ],
+  },
+];
 const options = [
-  { value: "option1", label: "Option 1" },
-  { value: "option2", label: "Option 2" },
-  { value: "option3", label: "Option 3" },
+  { label: <span>Apple</span>, value: "Apple", disabled: true },
+  { label: <span>Banana</span>, value: "Banana" },
+  { label: <span>Orange</span>, value: "Orange", disabled: true },
+  { label: <span>Mango</span>, value: "Mango" },
 ];
 
 export const Default: Story = {
@@ -50,27 +73,16 @@ export const Default: Story = {
     options: options,
   },
 };
-
-export const Small: Story = {
+export const OptionWithCategories: Story = {
   args: {
-    placeholder: "Small select",
-
-    options: options,
+    placeholder: "Select an option",
+    options: optionWithCategories,
   },
 };
-
-export const Large: Story = {
-  args: {
-    placeholder: "Large select",
-
-    options: options,
-  },
-};
-
 export const Error: Story = {
   args: {
     placeholder: "Error select",
-
+    status: "error",
     options: options,
   },
 };

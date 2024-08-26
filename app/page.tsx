@@ -3,6 +3,7 @@ import Image from "next/image";
 import Button from "../components/ui/button";
 import Navigation from "@/components/ui/navigation";
 import Select from "@/components/ui/select";
+import { useState } from "react";
 export default function Home() {
   const menuItems = [
     {
@@ -45,16 +46,38 @@ export default function Home() {
       href: "/about",
     },
   ];
-
-  const selectOptions = [
-    { value: "option1", label: "Option 1" },
-    { value: "option2", label: "Option 2" },
-    { value: "option3", label: "Option 3" },
+  const options = [
+    {
+      label: <span>Frutis</span>,
+      title: "Frutis",
+      options: [
+        { label: <span>Apple</span>, value: "Apple" },
+        { label: <span>Banana</span>, value: "Banana" },
+        { label: <span>Orange</span>, value: "Orange" },
+        { label: <span>Mango</span>, value: "Mango" },
+      ],
+    },
+    {
+      label: <span>Vegetables</span>,
+      title: "Vegetables",
+      options: [
+        { label: <span>Carrot</span>, value: "Carrot" },
+        { label: <span>Broccoli</span>, value: "Broccoli" },
+        { label: <span>Cucumber</span>, value: "Cucumber" },
+        { label: <span>Lettuce</span>, value: "Lettuce" },
+      ],
+    },
   ];
+  const [art, setArt] = useState();
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-white  ">
       {/* <Navigation menuItems={menuItems} /> */}
-      <Select placeholder="Select an option" options={selectOptions} />
+      <Select
+        placeholder="Select an option"
+        options={options}
+        value={art}
+        onChange={setArt}
+      />
       {/* <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get started by editing&nbsp;
